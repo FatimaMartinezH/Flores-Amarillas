@@ -1,0 +1,62 @@
+
+body {
+    background: #000000;
+   
+    }
+
+    canvas {
+        
+        justify-content: center;
+        align-items: center;
+    }
+
+
+footer {
+    background: #000000;
+    overflow: hidden;
+   
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #ffffff;
+    font-weight: 250;
+}
+
+
+
+/* Estilos específicos para teléfonos móviles */
+@media screen and (max-width: 768px) {
+
+
+
+    /* Estilos para pantallas con un ancho máximo de 768px, como teléfonos móviles */
+    body {
+        /* Puedes aplicar estilos específicos para el cuerpo del documento en dispositivos móviles aquí */
+    }
+
+    /* Puedes agregar estilos adicionales para otros elementos específicos si es necesario */
+    canvas {
+        /* Estilos para el lienzo en dispositivos móviles */
+        width: 100%; /* Ancho completo del lienzo en dispositivos móviles */
+        height: auto; /* Altura automática para mantener la relación de aspecto */
+    }
+    
+    /* Estilos para el audio player en dispositivos móviles */
+    audio {
+        width: 100%; /* Ancho completo del reproductor de audio en dispositivos móviles */
+    }
+    
+    /* Estilos para el footer en dispositivos móviles */
+    footer {
+        /* Puedes aplicar estilos específicos para el pie de página en dispositivos móviles aquí */
+    }
+}
+
+
+
+

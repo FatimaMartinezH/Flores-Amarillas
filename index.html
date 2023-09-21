@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Flores Amarillas</title>
+</head>
+
+<body>
+    <canvas id="miCanvas" width="950" height="350"></canvas>
+
+    <script>
+        const canvas = document.getElementById('miCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function dibujarFlor(x, y) {
+            // Dibuja el tallo
+            ctx.fillStyle = 'green';
+            ctx.fillRect(x + 8, y + 50, 4, 60);
+
+            // Dibuja las hojas
+            ctx.fillStyle = 'green';
+            ctx.beginPath();
+            ctx.moveTo(x + 10, y + 110);
+            ctx.lineTo(x - 10, y + 70);
+            ctx.lineTo(x + 10, y + 70);
+            ctx.fill();
+
+            // Dibuja los pétalos
+            ctx.fillStyle = 'yellow';
+            for (let i = 0; i < 6; i++) {
+                const angle = (i * Math.PI) / 3;
+                const petaloX = x + 20 * Math.cos(angle);
+                const petaloY = y + 20 * Math.sin(angle);
+                ctx.beginPath();
+                ctx.arc(petaloX, petaloY, 10, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        // Posiciones para las flores
+        const posiciones = [
+            { x: 100, y: 200 },
+            { x: 250, y: 100 },
+            { x: 400, y: 200 },
+            { x: 550, y: 100 },
+            { x: 700, y: 200 },
+            { x: 850, y: 100 },
+        ];
+
+        // Dibuja 6 flores en posiciones diferentes
+        posiciones.forEach(pos => {
+            dibujarFlor(pos.x, pos.y);
+        });
+    </script>
+</body>
+
+<footer>
+    <audio controls>
+        <source src="img/X2Download (mp3cut.net).mp3" type="audio/mp3">
+    </audio>
+    <h1>Para mi amorcito bonita</h1>
+    <h2>Te amo mucho corazón de melón. No te mandé flores, pero si te las programé</h2>
+
+</footer>
+</html>

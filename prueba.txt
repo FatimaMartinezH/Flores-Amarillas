@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flor Amarilla</title>
+</head>
+<body>
+    <canvas id="miCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('miCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Dibuja el tallo
+        ctx.fillStyle = 'green';
+        ctx.fillRect(180, 250, 40, 100);
+
+        // Dibuja las hojas
+        ctx.fillStyle = 'green';
+        ctx.beginPath();
+        ctx.moveTo(200, 250);
+        ctx.lineTo(160, 220);
+        ctx.lineTo(200, 200);
+        ctx.lineTo(240, 220);
+        ctx.fill();
+
+        // Dibuja los pétalos
+        ctx.fillStyle = 'yellow';
+        ctx.beginPath();
+        ctx.arc(200, 150, 40, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(160, 190, 40, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(200, 190, 40, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(240, 190, 40, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(200, 230, 40, 0, Math.PI * 2);
+        ctx.fill();
+    </script>
+</body>
+</html>
+
+
+
